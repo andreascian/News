@@ -50,8 +50,9 @@ class NewsRenderer {
 	public $permalinks; //wether to force permalinks in feeds, even in publication mode
 
 	static function newFromArticle( $article, $parser ) {
-		$article->getContent();
-		$text = $article->mContent;
+#		$article->getContent();
+#		$text = $article->mContent;
+		$text = $article->getContent();
 		if (!$text) return null;
 
 		$uniq_prefix = "\x07NR-UNIQ";
